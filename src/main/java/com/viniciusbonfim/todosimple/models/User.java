@@ -16,9 +16,9 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import java.util.Objects;
 
 @Entity
-@Table(name = User2.TABLE_NAME)
+@Table(name = User.TABLE_NAME)
 
-public class User2 {
+public class User {
     public interface CreateUser {
     }
 
@@ -47,10 +47,10 @@ public class User2 {
 
     // private List<Task> tasks = new ArrayList<Task>();
 
-    public User2() {
+    public User() {
     }
 
-    public User2(Long id, String username, String password) {
+    public User(Long id, String username, String password) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -87,9 +87,9 @@ public class User2 {
             return true;
         if (obj == null)
             return false;
-        if (!(obj instanceof User2))
+        if (!(obj instanceof User))
             return false;
-        User2 other = (User2) obj;
+        User other = (User) obj;
         if (this.id == null)
             if (other.id != null)
                 return false;
